@@ -65,8 +65,12 @@ app.get('/auth', (req, res) => {
 //html 페이지 접속
 //__dirname: Node.js에서 제공하는 전역 변수, 현재 실행 중인 파일의 디렉토리 경로를 나타냄
 app.get('/sdk.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'sdk.html'));
+    res.sendFile(path.join(__dirname, 'sdk.html'));
 });
+
+app.get('/sdk2.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'sdk2.html'));
+})
 
 
 // 서버 실행
